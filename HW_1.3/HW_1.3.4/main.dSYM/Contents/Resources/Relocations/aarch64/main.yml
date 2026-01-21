@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/atlasbright/Codeproject/HW_1.3/HW_1.3.4/main'
+relocations:     []
+...
