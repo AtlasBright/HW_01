@@ -6,13 +6,14 @@
 int main (){
     std::string word;
     std::ifstream cur_file ("data.txt");
-    for(;;){
-        cur_file >> word;
-        std::cout << word << std::endl;
-        if(cur_file.eof() == 1){
-            cur_file.close();
-            break;
-        }
+    if (!cur_file.is_open()) {
+    std::cout << "Не удалось открыть файл\n";
+    return 1;
+}
+   while (cur_file >> word) {
+    std::cout << word << std::endl;
     }
+    cur_file.close();
+    return 0;
 
 }
